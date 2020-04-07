@@ -1,8 +1,8 @@
 import random
  
-WORDLIST = 'wordlist.txt'
+WORDLIST = "wordlist.txt"
  
-def get_random_word(min_word_length):
+def randomWord(minWord):
     num_words_processed = 0
     current_word = None
     with open(WORDLIST, 'r') as f:
@@ -10,7 +10,7 @@ def get_random_word(min_word_length):
             if '(' in word or ')' in word:
                 continue
             word = word.strip().lower()
-            if len(word) < min_word_length:
+            if len(word) < minWord:
                 continue
             num_words_processed += 1
             if random.randint(1, num_words_processed) == 1:
