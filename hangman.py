@@ -55,7 +55,7 @@ def nextLetter(remaining_letters):
 """Play a game of hangman.
 Returns if the player wants to retry."""
 
-def play_hangman():
+def hangman():
     name = input('What is your name? ')
     print('Welcome to Hangman!!', name)
     print('Starting a game of Hangman...')
@@ -107,5 +107,5 @@ def play_hangman():
     return try_again.lower() == 'y'
 
 if __name__ == '__main__':
-    while play_hangman():
+    while hangman():
         print()
