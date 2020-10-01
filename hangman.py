@@ -5,15 +5,15 @@ from words import randomWord
 def getAttempt():
     while True:
         num_attempts = input(
-            'How many incorrect attempts do you want? [1-25] ')
+            'How many incorrect attempts do you want? [1-20] ')
         try:
             num_attempts = int(num_attempts)
-            if 1 <= num_attempts <= 25:
+            if 1 <= num_attempts <= 20:
                 return num_attempts
             else:
-                print('{0} is not between 1 and 25'.format(num_attempts))
+                print('{0} is not between 1 and 20'.format(num_attempts))
         except ValueError:
-            print('{0} is not an integer between 1 and 25'.format(
+            print('{0} is not an integer between 1 and 20'.format(
                 num_attempts))
 
 def get_minWord():
